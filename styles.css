@@ -20,22 +20,22 @@ body {
   color: rgb(8, 2, 2);
 }
 
+/* NAV STYLES */
 nav {
   padding-top: 3rem;
   position: fixed;
-  display: flex;
   z-index: 1000;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  /* top: 3rem; */
-  /* border: 1px solid red; */
 }
+
 nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0;
-  width: 93%;
+  padding: 4rem 4rem;
 }
 
 nav ul li {
@@ -49,6 +49,30 @@ nav ul li a {
   font-weight: 800;
 }
 
+.call-to-action {
+  display: block;
+  padding: 10px 35px 10px 35px;
+  transition: 0.5s all;
+}
+
+.my-work {
+  border: 1px solid #fff;
+}
+.my-work:hover {
+  background-color: rgb(26, 26, 27);
+}
+
+.get-in-touch {
+  background-color: rgb(192, 64, 17);
+  border: 1px solid transparent;
+}
+
+.get-in-touch:hover {
+  background-color: rgb(230, 68, 9);
+}
+
+/* WELCOME SECTION STYLES */
+
 #welcome-section {
   height: 100vh;
   position: relative;
@@ -56,17 +80,11 @@ nav ul li a {
   padding: 15rem 4rem;
   margin: 0;
   background-color: rgb(8, 2, 2);
-  /* display: flex; */
-  /* border: 1px solid red; */
 }
 .hero__content {
-  /* border: 1px solid whitesmoke; */
   height: 60%;
 }
-.hero__art {
-  /* border: 1px solid blue;
-  height: 40rem; */
-}
+
 h1,
 h2 {
   font-family: "Neco", serif;
@@ -81,35 +99,17 @@ h1 {
 }
 h2 {
   font-size: 4rem;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-#welcome-section__h2 {
-  animation: slideInFromLeft 2s ease;
-}
-.call-to-action {
-  display: block;
-  padding: 10px 35px 10px 35px;
-  transition: 0.5s all;
-}
-.get-in-touch {
-  background-color: rgb(192, 64, 17);
-}
-.get-in-touch:hover {
-  background-color: rgb(207, 70, 21);
+  margin: 0;
 }
 
-.my-work {
-  border: 1px solid #fff;
-  margin-left: 4rem;
-}
-.my-work:hover {
-  background-color: rgb(26, 26, 27);
+#welcome-section__h2 {
+  animation: slideInFromLeft 2s ease;
 }
 
 .text--orange {
   color: rgb(192, 64, 17);
 }
+
 .square {
   width: 30rem;
   height: 40rem;
@@ -132,8 +132,9 @@ h2 {
   z-index: 1;
 }
 
+/* PROJECT SECTION STYLES */
+
 #projects {
-  background-color: rgb(255, 255, 255);
   background-color: rgb(26, 26, 27);
   color: rgb(26, 26, 27);
   padding: 3rem 9rem;
@@ -150,12 +151,11 @@ h2 {
   top: 44rem;
   right: -20rem;
 }
+
 .project-tile {
-  display: flex;
   align-items: center;
   position: relative;
   transition: 0.5s all ease-in-out;
-  width: 50%;
   margin-right: 0;
 }
 .project-tile__header {
@@ -169,16 +169,19 @@ h2 {
   margin: 0;
   transition: 0.5s all ease-in-out;
   z-index: 30;
-  width: 120%;
 }
 
+.content-container {
+  width: 80%;
+}
 .project-tile__header--technical-doc {
   line-height: 10rem;
   font-size: 7rem;
 }
 
 .content-container:hover .project-tile__header--technical-doc {
-  letter-spacing: 0.2rem;
+  font-size: 5rem;
+  letter-spacing: 1rem;
 }
 
 .content-container:hover .project-tile__img {
@@ -186,23 +189,21 @@ h2 {
 }
 
 .content-container:hover .project-tile__header {
-  letter-spacing: 1rem;
   top: -0.05rem;
-}
-.project-tile__text {
-  flex: 2;
-  line-height: 5rem;
-  z-index: 29;
-  color: rgb(255, 255, 255);
+  font-size: 5rem;
+  letter-spacing: 1rem;
 }
 
 .project-tile__img {
   height: 40rem;
   transition: 0.5s all;
 }
+
 a {
   text-decoration: none;
 }
+
+/* FOOTER STYLES */
 .footer {
   background-color: rgb(8, 2, 2);
   margin: 0;
@@ -226,39 +227,58 @@ a {
 .footer ul li {
   list-style-type: none;
 }
+.footer ul li a {
+  transition: 3s all ease-in-out;
+}
 
 .fab {
   color: rgb(255, 255, 255);
   font-size: 4rem;
+  transition: 0.3s all ease-in-out;
 }
 
-@media screen and (max-width: 500px) {
+.fab:hover {
+  color: rgb(192, 64, 17);
+  scale: 1.5;
+}
+
+@media screen and (max-width: 480px) {
   body {
     font-size: 1.2rem;
   }
+
+  nav {
+    padding-top: 3rem;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 2rem;
+  }
+  .call-to-action {
+    padding: 5px 17.5px 5px 17.5px;
+  }
+
   #welcome-section {
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
   }
-  h1,
-  h2 {
-    width: 100%;
-  }
+
   h1 {
-    font-size: 4rem;
+    font-size: 2.75rem;
     line-height: 6rem;
   }
   h2 {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   .hero__content {
-    margin-top: 20rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
   }
   .square {
     display: none;
-  }
-  .get-in-touch {
-    margin-left: 3rem;
   }
 
   /* PROJECT SECTION STYLES */
@@ -271,20 +291,41 @@ a {
   .content-container {
     display: flex;
     flex-direction: column;
-  }
-  .project-tile {
     width: 100%;
-/*     border: 1px solid red; */
   }
   .project-tile__header {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-bottom: 6rem;
   }
   .project-tile__header--technical-doc {
-    margin-bottom: 3.5rem;
+    line-height: 2.75rem;
   }
   .project-tile__img {
-    height: 20rem;
+    height: 18rem;
+  }
+
+  .content-container:hover .project-tile__header--technical-doc {
+    font-size: 2.75rem;
+    letter-spacing: 1rem;
+  }
+
+  .content-container:hover .project-tile__header {
+    top: -5px;
+    font-size: 2.75rem;
+    letter-spacing: 1rem;
+  }
+
+  /* FOOTER SECTION STYLES */
+  .footer {
+    background-color: rgb(8, 2, 2);
+    margin: 0;
+    padding: 2rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    color: rgb(192, 64, 17);
+    font-family: "Neco", serif;
   }
 }
 
